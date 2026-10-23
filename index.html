@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>项目卡片</title>
+  <script type="module" crossorigin src="./assets/index.c183634e.js"></script>
+  <link rel="stylesheet" href="./assets/index.c1882cbc.css">
+</head>
+
+<body>
+  <main id="app">
+    <section id="config_block" hidden>
+      <h2>项目卡片 · 配置</h2>
+      <p class="hint">读取本多维表格里的「项目库」，按状态显示项目卡片。只需确认数据表后点保存。</p>
+      <label for="tableSelect">数据表</label>
+      <select id="tableSelect"></select>
+      <button type="button" id="save_btn">保存</button>
+    </section>
+
+    <section id="view_block" hidden>
+      <header class="bar">
+        <div class="tabs" role="tablist">
+          <button type="button" class="tab" data-tab="act" aria-selected="true">值得操作 <b data-count="act"></b></button>
+          <button type="button" class="tab" data-tab="soon" aria-selected="false">近期截止 <b data-count="soon"></b></button>
+          <button type="button" class="tab" data-tab="research" aria-selected="false">研究中 <b data-count="research"></b></button>
+        </div>
+        <span class="updated" id="updated"></span>
+      </header>
+      <div class="grid" id="cards"></div>
+      <p class="empty" id="empty" hidden>这一栏暂时没有项目（暂不做的项目不计入）</p>
+      <p class="foot">研究结论不代表资金批准；投多少由各自决定。</p>
+    </section>
+  </main>
+  
+</body>
+
+</html>
